@@ -10,6 +10,12 @@
   background-color: #292C34;
 }
 
+#shutzi{
+  background-image: url("images/shtzmanta.jpeg");
+  background-blend-mode: multiply;
+  background-color: #033B6E;
+  background-size: cover;
+}
 header{
   background: white;
   padding: 20px
@@ -100,13 +106,22 @@ header > h1 {
 }
 
 #nice {
-  background-color: white;
   text-align: center;
   color: black;
   font-family: Asap, sans-serif;
   font-weight: bold;
   font-size: 40px;
   margin: 20px;
+}
+
+#loll {
+  text-align: left;
+  color: white;
+  font-family: Asap, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 400px;
+  margin-left: 200px;
 }
 
 .green-glow {

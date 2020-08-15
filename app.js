@@ -34,12 +34,12 @@ function convertToWord(letter) {
 
 
 function win(userChoise, computerChoice, userChoise_div) {
-  let flag = false;
+  let niceFlag = false;
   userScore++;
   document.cookie = `userScore = ${userScore};`
   userScore_span.innerHTML = userScore;
-  if(userScore == 69 && flag == false){
-    flag = true;
+  if(userScore == 69 && niceFlag == false){
+    niceFlag = true;
     window.location.replace("nice.html");
   }
   else {
@@ -99,6 +99,7 @@ function game(userChoise){
 
 
 function main() {
+  let nineelvFlag = false;
   if(page == "index.html")
   {
     if(document.cookie){
@@ -107,6 +108,10 @@ function main() {
        computerScore = getCookieProc().computerScore;
        computerScore_span.innerHTML = computerScore;
       }
+    if (userScore == 9 && computerScore == 11 && nineelvFlag == false) {
+      window.location.replace("shutz.html");
+      nineelvFlag = true;
+    }
     rock_div.addEventListener('click', () => game("r"));
     paper_div.addEventListener('click', () => game("p"));
     scissors_div.addEventListener('click', () => game("s"));
@@ -114,7 +119,6 @@ function main() {
   else if (page == "nice.html") {
     setTimeout(() => window.location.replace("index.html"), 1000);
   }
-
 }
 
 
